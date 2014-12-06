@@ -95,7 +95,7 @@
 		
 		/* ADD MODAL*/
 		
-	$('.modalClick').on('Click', function(event){
+	$('.modalClick').on('click', function(event){
 		event.preventDefault();
 		$('#overlay')
 		.fadeIn()
@@ -114,7 +114,7 @@
 	
 	/*  FADING STATUS */
 			$('.mystatus').mouseover(function(){
-				$(this).fadeTo(100, 3);
+				$(this).fadeTo(100, .3);
 			});
 			
 			$('.mystatus').mouseout(function(){
