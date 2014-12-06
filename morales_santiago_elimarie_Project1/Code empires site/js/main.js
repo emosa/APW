@@ -122,6 +122,23 @@
 			});
 
 
+	/*  TEMPLATE USER ID */
+
+/*== 	tTAB ACCORDION ==*/
+
+$('#tabs p').hide().eq().show();
+$$('#tabs p:not(:first)').hiden();
+
+$('#tabs-nav li').click(function(e){
+	e.preventDefault();
+	$('#tabs p').hide();
+	
+$('#tabs-nav .current').removeClass("current");
+	$(this).addClass('current');
+	var clicked = $(this).find('a:first').attr('href');
+	
+	$('#tabs' + clicked).fadeIn('fast');
+}).eq(0).addClass('current');
 	
 
 	
