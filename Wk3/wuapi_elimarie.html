@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--Elimarie Morales Santiago 
+	12/6/2014
+    December
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Weather API</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<style>
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background-color:#9ED6FF;
+}
+
+#container{
+	width: 90%;
+	margin: 0 auto;
+	height: 600px;
+}
+
+.left {
+	width: 35%;
+	padding: 5%;
+	float: left;
+}
+
+.right {
+	width: 45%;
+	padding: 2%;
+	float: right;
+}
+
+h1 {
+	text-align: center;
+	padding: 2%;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div id="container">
+<header> 
+	<h1>Weather Underground API</h1>
+</header>
+
+<div class="left">
+<h2>Your Three Day Forecast Summary</h2>
+<p class="three">
+<!--1. Display the three day Forecast Summary here-->
+</p>
+<h2>Your 10-day forecast summary</h2>
+<p class="tenDay">
+<!--2. Display the 10-day forecast summary feature here-->
+</p>
+</div><!--Closes Leftr-->
+
+
+
+<div class="right">
+<h2>Your Hourly 1-day forecast</h2>
+<p class="hourFore">
+<!--3. Display the Hourly 1-day forecast feature here-->
+</p>
+
+<h2>Your Astronomy Summary</h2>
+<p class="astro">
+<!--4. Display the WU Astronomy feature here-->
+</p>
+
+<h2>Your Almanac for today</h2>
+<p class="almanac">
+<!--5. Display the Almanac for today feature here-->
+</p>
+</div><!--Closes Right-->
+</div><!--Closes Container-->
+
+
+<!--Link to jQuery Library-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+<script>
+$(document).ready(function($){
+	
+<!--This is an example of how to embed Geolookup. Use your own API key and city location-->	
+/*	$.ajax({ 
+		url : "http://api.wunderground.com/api/059497a4f760a0e8/geolookup/conditions/q/NY/New-york.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var temp_f = parsed_json['current_observation']['temp_f'];
+                  $(".three").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+          } 
+	});
+}); */ //Closes Doc Ready Function
+
+	
+<!--Use your own API key and city location-->
+<!--1.Embed the WU 3-day forecast summary feature.-->
+<!--Your Code Here-->
+$.ajax({ 
+		url : "http://api.wunderground.com/api/059497a4f760a0e8/geolookup/conditions/q/NY/New-york.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var location = parsed_json['location']['city']; 
+              var temp_f = parsed_json['current_observation']['temp_f'];
+                  $(".three").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+          } 
+		  
+});
+
+
+
+<!--2.Embed the WU 10-day forecast summary feature.-->	
+<!--Your Code Here-->
+$.ajax({ 
+		url : "http://api.wunderground.com/api/059497a4f760a0e8/forecast10day/conditions/q/NY/New-york.json",
+		dataType : "jsonp", 
+          success : function(parsed_json) { 
+              var forecastday = parsed_json['forecastday']['city']; 
+              var temp_f = parsed_json['current_observation']['temp_f'];
+                  $(".tenDay").html("Current temperature in " + location + " is: " + temp_f+"ºF");
+          } 
+		  
+});
+
+
+<!--3.Embed the WU Hourly 1-day forecast feature.-->	
+<!--Your Code Here-->
+
+
+
+<!--4.Embed the WU Astronomy feature.-->	
+<!--Your Code Here-->
+	
+
+<!--5.Embed the WU Almanac for today feature.-->	
+<!--Your Code Here-->
+});
+</script>
+
+
+	
+
+
+	
+
+
+
+</body>
+</html>
