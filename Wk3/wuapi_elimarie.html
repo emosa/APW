@@ -103,44 +103,122 @@ $(document).ready(function($){
 <!--Use your own API key and city location-->
 <!--1.Embed the WU 3-day forecast summary feature.-->
 <!--Your Code Here-->
-$.ajax({ 
-		url : "http://api.wunderground.com/api/059497a4f760a0e8/geolookup/conditions/q/NY/New-york.json",
-		dataType : "jsonp", 
-          success : function(parsed_json) { 
-              var location = parsed_json['location']['city']; 
-              var temp_f = parsed_json['current_observation']['temp_f'];
-                  $(".three").html("Current temperature in " + location + " is: " + temp_f+"ºF");
-          } 
-		  
-});
-
-
-
+       
+     $.ajax({
+    url: "http://api.wunderground.com/api/059497a4f760a0e8/forecast/q/NY/Bronx.json",
+    dataType: "jsonp",
+    success: function(parsed_json) {
+        var threeD = parsed_json['forecast']['txt_forecast'][
+            'forecastday'
+        ];
+        for (var index in threeD) {
+            $(".three").html('Day: ' + threeD[index]['title'] +
+                ' <br> ' + 'Forecast:' + '\u0020' + threeD[
+                    index]['fcttext']);
+        }
+    }
+});          
+					  
 <!--2.Embed the WU 10-day forecast summary feature.-->	
 <!--Your Code Here-->
-$.ajax({ 
-		url : "http://api.wunderground.com/api/059497a4f760a0e8/forecast10day/conditions/q/NY/New-york.json",
-		dataType : "jsonp", 
-          success : function(parsed_json) { 
-              var forecastday = parsed_json['forecastday']['city']; 
-              var temp_f = parsed_json['current_observation']['temp_f'];
-                  $(".tenDay").html("Current temperature in " + location + " is: " + temp_f+"ºF");
-          } 
-		  
-});
 
-
+$.ajax({
+    url: "http://api.wunderground.com/api/059497a4f760a0e8/forecast10day/q/NY/Bronx.json",
+    dataType: "jsonp",
+    success: function(parsed_json) {
+        var tenDay = parsed_json['forecast']['txt_forecast'][
+            'forecastday'
+        ];
+        for (var index in tenDay) {
+            $(".tenDay").html('Day: ' + tenDay[index]['title'] +
+                ' <br> ' + 'Forecast:' + tenDay[index][
+                    'fcttext'
+                ] + '\u0020' + 'Probability of Precipitation ' +
+                tenDay[index]['pop'] + '%.');
+        }
+    }
+}); 
+  
 <!--3.Embed the WU Hourly 1-day forecast feature.-->	
 <!--Your Code Here-->
+/* 3 day stock in this one tried everything array and loops but it did not work for me. I don't know what I was doing wrong.*/
+  $.ajax({
+      url: "http://api.wunderground.com/api/059497a4f760a0e8/hourly/q/NY/Bronx.json",
+     dataType: "jsonp",
+        success: function (parsed_json) {
+       	 var hourly = parsed_json['hourly_forecast']['FCTTIME']['hour'];
+		 console.log(hourly);
+		 
+		}
+    });
 
 
 
 <!--4.Embed the WU Astronomy feature.-->	
 <!--Your Code Here-->
-	
-
+	$.ajax({
+    url: "http://api.wunderground.com/api/059497a4f760a0e8/astronomy/q/NY/Bronx.json",
+    dataType: "jsonp",
+    success: function(parsed_json) {
+        var moonIll = parsed_json['moon_phase'][
+            'percentIlluminated'
+        ];
+        var moon = parsed_json['moon_phase']['ageOfMoon'];
+        var hour = parsed_json['moon_phase']['current_time'][
+            'hour'
+        ];
+        var minute = parsed_json['moon_phase']['current_time'][
+            'minute'
+        ];
+        var sunriseH = parsed_json['moon_phase']['sunrise']['hour'];
+        var sunriseMin = parsed_json['moon_phase']['sunrise'][
+            'minute'
+        ];
+        var sunsetH = parsed_json['moon_phase']['sunset']['minute'];
+        var sunsetMin = parsed_json['moon_phase']['sunset'][
+            'minute'
+        ];
+        $('.astro').html('Moon Ill: ' + moonIll + '%' + ' <br> ' +
+            'Moon Age: ' + moon + ' <br> ' +
+            'Current time: ' + hour + ':' + minute +
+            ' <br> ' + 'Sunrise: ' + sunriseH + ':' +
+            sunriseMin + ' <br> ' + 'Sunset: ' + sunsetH + ':' +
+            sunsetMin);
+    }
+});
 <!--5.Embed the WU Almanac for today feature.-->	
 <!--Your Code Here-->
+
+
+$.ajax({
+    url: "http://api.wunderground.com/api/059497a4f760a0e8/almanac/q/NY/Bronx.json",
+    dataType: "jsonp",
+    success: function(parsed_json) {
+        var airCode = parsed_json['almanac']['airport_code'];
+        var aveH = parsed_json['almanac']['temp_high']['normal'][
+            'F'
+        ];
+        var recH = parsed_json['almanac']['temp_high']['record'][
+            'F'
+        ];
+        var recY = parsed_json['almanac']['temp_high']['recordyear'];
+        var aveL = parsed_json['almanac']['temp_low']['normal']['F'];
+        var recL = parsed_json['almanac']['temp_low']['record']['F'];
+        var reclY = parsed_json['almanac']['temp_low']['recordyear']
+        $(".almanac").html('Local Airport:' + airCode + ' <br> ' +
+            'Average High:' + aveH + '\u2109' + ' <br> ' +
+            'Record High:' + recH + '\u2109' + ' <br> ' +
+            'Record Year:' + recY + ' <br> ' + 'Average Low:' +
+            aveL + '\u2109' + ' <br> ' + 'Record Low:' + recH +
+            '\u2109' + ' <br> ' + 'Record Year:' + reclY);
+    }
+});
+
+
+
+
+
+
 });
 </script>
 
