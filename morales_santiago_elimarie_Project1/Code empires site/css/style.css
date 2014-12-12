@@ -108,7 +108,7 @@ input {
     box-sizing:border-box
 }
 
-#first,#last,#userName,#email,#confirm,#password,#confirmp,{
+#first,#last,#userName,#email,#confirm,#password,#confirmp{
     width:100%;
     height:50px;
     margin-bottom:25px;
@@ -794,7 +794,7 @@ input[type=radio]:checked + img{
     cursor:pointer
 }
 
-.projectsbtn:hover, .taskbtn:hover, .usersbtn:hover, {
+.projectsbtn:hover, .taskbtn:hover, .usersbtn:hover {
     background:#E3A019;
     background-image:-webkit-linear-gradient(top,#E3A019,#E3A019);
     background-image:-moz-linear-gradient(top,#E3A019,#E3A019);

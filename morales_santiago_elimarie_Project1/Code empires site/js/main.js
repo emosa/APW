@@ -104,7 +104,7 @@
     });
 	 $('#register').on('click', function(e) {
         e.preventDefault();
-        window.location.assign('register.html')
+        window.location.assign('admin.html')
     });
 	
     
