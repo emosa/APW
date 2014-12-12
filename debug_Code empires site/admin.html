@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+    This is the main index of the application
+    
+    All your script tags should be at the bottom of this file
+    
+    The only html element in the body is the container div
+    Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>Code Empires</title>
+    <meta content=
+    "Learn design & coding from the #1 empires of the web." name="description">
+    <meta content="Elimarie Morales Santiago" name="author">
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- CSS concatenated and minified via ant build script-->
+    <link href="css/style.css?v=1" rel="stylesheet"><!-- end CSS-->
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img alt="Code Empires Logo" src=
+        "images/logo_Outlines2.png"></div><!-- end logo tag -->
+
+        <div class="userid">
+            Hello:
+        </div>
+
+        <div class="logoutbox">
+            <input id="logOut" name="logOut" type="button" value="Sign Out">
+        </div>
+    </header><br>
+
+    <h1>Welcome to your Dashboard</h1>
+
+    <p>In your dashboard you can track your lessons progress, view your badges,
+    receive new notifications, receive bonus lessons alerts, and view instant
+    feedback. Also you can view, create or submit projects, create or add
+    collaboration groups, and sign up for live workshops & conferences.</p>
+<br>
+<br>
+	<div>
+    <ul id="tabs-nav">
+    <li><a href="#projects">
+    
+    <img src="images/project.png" id="projects"></a></li>
+    
+    <li><a href="#task">
+    <img src="images/tasks.png" id="tasks"></a></li>
+    
+    <li><a href="#users">
+    <img src="images/user.png" id="users"></a></li>
+   	</ul>
+    
+    <div id="tabs">
+    
+    <p id="projects">
+    Submit your code or collaborate with others.<br><br>
+    Go to my projects... <button class="projectsbtn">Projects</button>
+    </p>
+    
+    <p id="task"> 
+    Create projects, assign and schedule tasks.<br><br>
+    Go to my tasks... <button class="taskbtn">Tasks</button>
+    </p>
+	
+    <p id="users">
+    Track your progress and badges.<br><br>
+    Go to my profile... <button class="usersbtn">Profile</button>
+    </p>
+  </div>  <!-- end tabs -->
+  </div>  <!-- end tabs nav -->
+
+	
+    <h3>Learn More</h3>
+
+   		<div class="img">
+            <a href="">
+            <img src="images/html5.png" alt="HTML5">
+            <div class="desc">Learn HTML5</div></a>
+    </div>
+    
+    	<div class="img">
+            <a href="">
+            <img src="images/CSS.png" alt="CSS">
+            <div class="desc">Learn CSS</div></a>
+    </div>
+    
+    	<div class="img">
+            <a href="">
+            <img src="images/JS.png" alt="Javascript">
+            <div class="desc">Learn Javascript</div></a>
+    	</div>
+    
+        <div class="img">
+       		<a href="">
+            <img src="images/jq.png" alt="JQuery">
+            <div class="desc">Learn JQuery</div></a>
+        </div>
+     
+
+
+  
+    <footer>
+        <!-- Footer content -->
+    </footer><!-- jquery -->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> <!-- plugins -->
+     <!-- main -->
+     <script type="text/javascript" src="js/main.js" ></script>
+</body>
+</html>
