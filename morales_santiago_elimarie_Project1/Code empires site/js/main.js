@@ -41,7 +41,7 @@
                     alert(response.error);
                 } else {
                     window.location.assign('admin.html')
-                }
+                };
             }
         });
     });
@@ -55,7 +55,7 @@
     });
     
     /*== REGISTER ==*/
-    $('#register').on('click', function() {
+    $('#submit').on('click', function() {
         var firstname = $('#first').val(),
             lastname = $('#last').val(),
             username = $('#userName').val(),
@@ -79,7 +79,7 @@
                 if (response.error) {
                     alert(response.error);
                 } else {
-                    window.location.assign('admin.html');
+                    window.location.assign('index.html');
                 }
             }
         });
@@ -104,8 +104,10 @@
     });
 	 $('#register').on('click', function(e) {
         e.preventDefault();
-        window.location.assign('admin.html')
+        window.location.assign('register.html')
     });
+	 
+	
 	
     
     /* ADD MODAL*/
