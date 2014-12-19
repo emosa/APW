@@ -195,12 +195,16 @@
                             '<div style="border:1px solid black">' +
                             " <input class='projectid' type='hidden' value='" +
                             result.id + "'>" +
-                            "Project Name: " + result.projectName +
-                            "<br>" +
-                            "Project Description: " +
-                            result.projectDescription +
-                            "<br>" + "Project Status: " +
-                            result.status + "<br>" +
+							"Project Name: " + result.projectName +
+							"<br>" +
+							"Project Description: " +
+							result.projectDescription +
+							"<br>" +
+							"Project Due Date: " +
+							result.dueDate +
+							"<br>" +
+							"Project Status: " +
+							result.status + "<br>" +
                             '<button class="deletebtn">Delete</button>' +
                             '<button class="editbtn">Edit</button>' +
                             '</div> <br>');
