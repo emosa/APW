@@ -831,10 +831,16 @@ background:#002D40;
 	height: 90px; 
 }
 
-#sortable li span { 
-	position: absolute; 
-	margin-left: -1.3em; 
+html>body #sortable li { 
+	height: 1.5em; 
+	line-height: 1.2em; 
 }
+
+.ui-state-highlight { 
+	height: 1.5em; 
+	line-height: 1.2em; 
+}
+
 
 .image-gallery {
 	width:625px;

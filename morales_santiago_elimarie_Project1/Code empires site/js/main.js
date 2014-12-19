@@ -194,7 +194,6 @@
                         $(".projects").append(
                            // '<div style="border:1px solid black">' +
                             '<div id="sortable" class="ui-state-default">' +
-							'<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>'+
                             "<input class='projectid' type='hidden' value='" + result.id + "'>" +
                             
 							"Project Name: " + result.projectName +
@@ -272,7 +271,9 @@
 	/*  SORTABLE  */
 	
 	
-    $( "#sortable" ).sortable();
+    $( "#sortable" ).sortable({
+      placeholder: "ui-state-highlight"
+    });
     $( "#sortable" ).disableSelection();
  
 	
