@@ -192,9 +192,11 @@
                         j; i++) {
                         var result = response.projects[i];
                         $(".projects").append(
-                            '<div style="border:1px solid black">' +
-                            " <input class='projectid' type='hidden' value='" +
-                            result.id + "'>" +
+                           // '<div style="border:1px solid black">' +
+                            '<div id="sortable" class="ui-state-default">' +
+							'<span class="ui-icon ui-icon-arrowthick-2-n-s"></span>'+
+                            "<input class='projectid' type='hidden' value='" + result.id + "'>" +
+                            
 							"Project Name: " + result.projectName +
 							"<br>" +
 							"Project Description: " +
@@ -206,17 +208,17 @@
 							"Project Status: " +
 							result.status + "<br>" +
                             '<button class="deletebtn">Delete</button>' +
-                            '<button class="editbtn">Edit</button>' +
+                            //'<button class="editbtn">Edit</button>' +
                             '</div> <br>');
                     }
 					
                     $('.deletebtn').on('click', function(e) {
-                        console.log('test delete');
+                        var resultID = $(this).parent().find(".projectid").val();
+					    console.log('test delete');
                         $.ajax({
                             url: 'xhr/delete_project.php',
                             data: {
-                                projectID: result
-                                    .id
+                                projectID: resultID
                             },
                             type: 'POST',
                             dataType: 'json',
@@ -254,7 +256,7 @@
     projects();
 	
 	
-	/* ADD BUTTON 
+	/* ADD BUTTON this did not work for me
 	$(function() {
     $( "input[type=submit], a, button" )
       .button()
@@ -267,6 +269,14 @@
 	/* DATE PICKER */
     $( ".datepicker" ).datepicker();
  
+	/*  SORTABLE  */
+	
+	
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+ 
+	
+	
 	
 	
 	

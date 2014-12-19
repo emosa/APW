@@ -796,7 +796,7 @@ input[type=radio]:checked + img{
     background-image:linear-gradient(to bottom,#E3A019,#E3A019);
     text-decoration:none
 }
-
+/*
 #projectlist{
 	margin: 12px;
 	padding:12px;
@@ -804,14 +804,37 @@ input[type=radio]:checked + img{
 	-moz-border-radius: 10px 10px 10px 10px;
 	-webkit-border-radius: 10px 10px 10px 10px;
 }
+background:#002D40;
+
 
 .projects{
-	background:#002D40;
+	
 	color: #75D6FF;
 	line-height: 35px;
 	font-size:20px;
 }
+*/
+/*SORTABLE */
 
+#sortable { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	width: 98%; 
+	
+}
+
+#sortable li{ 
+	margin: 0 3px 3px 3px;
+	padding: 5px; 
+	font-size: 1.4em;
+	height: 90px; 
+}
+
+#sortable li span { 
+	position: absolute; 
+	margin-left: -1.3em; 
+}
 
 .image-gallery {
 	width:625px;
