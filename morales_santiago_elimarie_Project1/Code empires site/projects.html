@@ -20,7 +20,9 @@
     <!--  Mobile viewport optimized: j.mp/bplateviewport -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- CSS concatenated and minified via ant build script-->
-    <link href="css/style.css" rel="stylesheet">
+    
+     <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.4.custom.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <!-- end CSS-->
 </head>
 
@@ -33,7 +35,7 @@
         </div>
 
         <div class="logoutbox">
-           <button class="dashboard">Dashboard</button>
+           <input name="dashboard" type="button" class="dashboard" value="Dashboard"/>
            <input name="logOuta" type="button" id="logOuta" value="Sign Out"/>
         </div>
     </header>
@@ -66,7 +68,7 @@
                     <label>Project Description:</label> 
                     <input name="projectDescription" type="text" id="projectDescription"  ><br>
                     <label>Project Due Date:</label> 
-                    <input name="projectDueDate" type="text" id="projectDueDate"><br>
+                    <input name="projectDueDate" type="text" id="projectDueDate" class="datepicker"><br>
                     <label for="status">Select status:</label>
                     <br>
                     
@@ -96,7 +98,11 @@
 </footer>
 <!-- jquery -->
  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> <!-- plugins -->
+ 
+ 
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js" ></script>
      <!-- main -->
+  
      <script type="text/javascript" src="js/main.js" ></script>
     </div>
 </body>

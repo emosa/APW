@@ -149,6 +149,7 @@
         $('#tabs ' + clicked).fadeIn('fast');
     }).eq(0).addClass('current');
     
+   
     /* NEW PROJECTS */
     $('#addButton').on('click', function() {
         var projName = $('#projectName').val(),
@@ -177,7 +178,7 @@
         });
     });
     
-    /* ADD PROJECTS */
+    /* GET PROJECTS */
     var projects = function() {
         $.ajax({
             url: 'xhr/get_projects.php',
@@ -204,6 +205,7 @@
                             '<button class="editbtn">Edit</button>' +
                             '</div> <br>');
                     }
+					
                     $('.deletebtn').on('click', function(e) {
                         console.log('test delete');
                         $.ajax({
@@ -246,4 +248,22 @@
         })
     }
     projects();
+	
+	
+	/* ADD BUTTON 
+	$(function() {
+    $( "input[type=submit], a, button" )
+      .button()
+      .click(function( event ) {
+        event.preventDefault();
+      });
+  });
+	*/
+	
+	/* DATE PICKER */
+    $( ".datepicker" ).datepicker();
+ 
+	
+	
+	
 })(jQuery); // end private scope
