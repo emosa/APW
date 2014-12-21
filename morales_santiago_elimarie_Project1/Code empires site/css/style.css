@@ -203,7 +203,8 @@ input {
 #cta {
     position:relative;
     margin:50px auto;
-    width:280px;
+    width:510px;
+	height:auto;
     padding:33px 25px 29px;
     background:#002D40;
     color:#FDFDFD;
@@ -211,8 +212,36 @@ input {
     border-radius:5px
 }
 
+
+.container {
+	text-align: left;
+	margin: 0px auto;
+	padding: 0px;
+	border:0;
+	width: 600px;
+}
+
+.login {
+	float: left;
+	width: 400px;
+}
+
+.cta { 
+	margin: 0;
+	float: left;
+	width: 300px;
+}
+
+.frontimg{
+    position: absolute;
+    top: 102.5%;
+    left: 104px;
+	
+}
+
 #register {
-    width:100%;
+    width:40%;
+	margin-left:300px;
     padding:10px 25px 12px 26px;
     font-size:20px;
     text-decoration:none;
@@ -782,24 +811,7 @@ input[type=radio]:checked + img {
     text-decoration:none
 }
 
-/*
-#projectlist{
-	margin: 12px;
-	padding:12px;
-	border-radius: 10px 10px 10px 10px;
-	-moz-border-radius: 10px 10px 10px 10px;
-	-webkit-border-radius: 10px 10px 10px 10px;
-}
-background:#002D40;
 
-
-.projects{
-	
-	color: #75D6FF;
-	line-height: 35px;
-	font-size:20px;
-}
-*/
 /*SORTABLE */
 #sortable {
     list-style-type:none;
