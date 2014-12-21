@@ -48,7 +48,7 @@
         });
     });
     
-	/*== LOGOUT ==*/
+	
     $('#logOut').click(function(e) {
         e.preventDefault;
         $.get('xhr/logout.php', function() {
@@ -87,7 +87,7 @@
         });
     });
     
-	/*  PROJECTS */
+	/*  LINK BUTTONS */
     $('.projectsbtn').on('click', function(e) {
         e.preventDefault();
         window.location.assign('projects.html')
@@ -207,6 +207,8 @@
                             //'<button class="editbtn">Edit</button>' +
                             '</div> <br>');
                     }
+					
+					/* PROJECT DELETE BUTTON */
                     $('.deletebtn').on('click', function(e) {
                         var resultID = $(this).parent()
                             .find(".projectid").val();
