@@ -82,7 +82,7 @@ p {
     color:#002D40;
     text-align:center;
     text-shadow:1px 1px 0 #ABA2A3;
-    background:#75D6FF;
+    background:#75D6FF
 }
 
 .sign-up-title:before {
@@ -108,13 +108,13 @@ input {
     box-sizing:border-box
 }
 
-#first,#last,#userName,#email,#confirm,#password,#confirmp{
+#first,#last,#userName,#email,#confirm,#password,#confirmp {
     width:100%;
     height:50px;
     margin-bottom:25px;
     padding:0 15px 2px;
     font-size:17px;
-	color: #000000;
+    color:#000;
     background:#fff;
     border:2px solid #ebebeb;
     border-radius:4px;
@@ -123,14 +123,13 @@ input {
     line-height:48px
 }
 
-
 #user,#pass {
     width:100%;
     height:50px;
     margin-bottom:25px;
     padding:0 15px 2px;
     font-size:17px;
-	color: #000000;
+    color:#000;
     background:#fff;
     border:2px solid #ebebeb;
     border-radius:4px;
@@ -138,14 +137,15 @@ input {
     box-shadow:inset 0 -2px #ebebeb;
     line-height:18px
 }
-#projectName, #projectDescription, #projectDueDate {
+
+#projectName,#projectDescription,#projectDueDate {
     width:100%;
     height:30px;
     margin-bottom:25px;
     padding:0 15px 2px;
     font-size:17px;
     background:#fff;
-	color: #000000;
+    color:#000;
     border:2px solid #ebebeb;
     border-radius:4px;
     -webkit-box-shadow:inset 0 -2px #ebebeb;
@@ -153,21 +153,19 @@ input {
     line-height:20px
 }
 
-#projectName:focus, #projectDescription:focus, #projectDueDate:focus{
-	border-color:#62c2e4;
-    outline:none;
-    -webkit-box-shadow:inset 0 -2px #62c2e4;
-    box-shadow:inset 0 -2px #62c2e4
-	
-	}
-	
-#user:focus, #pass:focus {
+#projectName:focus,#projectDescription:focus,#projectDueDate:focus {
     border-color:#62c2e4;
     outline:none;
     -webkit-box-shadow:inset 0 -2px #62c2e4;
     box-shadow:inset 0 -2px #62c2e4
 }
 
+#user:focus,#pass:focus {
+    border-color:#62c2e4;
+    outline:none;
+    -webkit-box-shadow:inset 0 -2px #62c2e4;
+    box-shadow:inset 0 -2px #62c2e4
+}
 
 #signinButton {
     width:100%;
@@ -256,8 +254,7 @@ input {
     color:#002D40;
     text-align:center;
     text-shadow:1px 1px 0 #ABA2A3;
-    background:#75D6FF;
-	
+    background:#75D6FF
 }
 
 .today-sign:before {
@@ -284,8 +281,6 @@ input {
     height:10px;
     background:inherit;
     border-radius:4px
-	
-	
 }
 
 #signtoday:after {
@@ -293,15 +288,15 @@ input {
     border-color:#75d6ff
 }
 
-.logoutbox, .dashboard{
+.logoutbox,.dashboard {
     float:right;
     padding-right:10px;
-    overflow:hidden;
+    overflow:hidden
 }
 
-#logOut{
-	float:right;
-	overflow:hidden;
+#logOut {
+    float:right;
+    overflow:hidden;
     width:30%;
     padding:10px;
     font-size:18px;
@@ -325,10 +320,10 @@ input {
     cursor:pointer
 }
 
-#addButton{
+#addButton {
     width:100px;
-	display:block;
-	max-width:100px;
+    display:block;
+    max-width:100px;
     padding:10px 25px 12px 26px;
     font-size:20px;
     text-decoration:none;
@@ -360,7 +355,6 @@ input {
     background-image:linear-gradient(to bottom,#E3A019,#E3A019);
     text-decoration:none
 }
-
 
 #logOut:hover {
     background:#E3A019;
@@ -394,8 +388,6 @@ input {
     border-radius:5px
 }
 
-
-
 #signform {
     position:relative;
     margin:50px auto;
@@ -422,7 +414,6 @@ input {
     bottom:1px;
     border-color:#75d6ff
 }
-
 
 #submit {
     width:100%;
@@ -457,6 +448,7 @@ input {
     background-image:linear-gradient(to bottom,#E3A019,#E3A019);
     text-decoration:none
 }
+
 #first:focus {
     border-color:#62c2e4;
     outline:none;
@@ -506,10 +498,9 @@ input {
     box-shadow:inset 0 -2px #62c2e4
 }
 
-
-.dashboard, #logOuta {
-   	float:right;
-	overflow:hidden;
+.dashboard,#logOuta {
+    float:right;
+    overflow:hidden;
     width:30%;
     padding:10px;
     font-size:18px;
@@ -544,87 +535,85 @@ input {
 }
 
 #tabs {
-	background-color: #002d40;
-	width: 600px;
-	height: 150px;
-	padding: 20px;
-	border-radius:20px;
+    background-color:#002d40;
+    width:600px;
+    height:150px;
+    padding:20px;
+    border-radius:20px
 }
 
-#tabs-nav{
-	width: 600px;
-	height: 75px;
-	padding: 20px;
-	padding-bottom:45px;
-	background-color: #002d40;
-	text-decoration:none;
-	list-style-type: none;
-	border-radius:20px;
+#tabs-nav {
+    width:600px;
+    height:75px;
+    padding:20px;
+    padding-bottom:45px;
+    background-color:#002d40;
+    text-decoration:none;
+    list-style-type:none;
+    border-radius:20px
 }
 
 /* overlay */
-
 #overlay {
-	width:100%;
-	height:100%;
-	background: rgba(0,0,0,.5);
-	position:absolute;
-	top: 0;
-	left:0;
-	z-index: 1000;
-	display: none;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.5);
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1000;
+    display:none
 }
 
 #modal {
-	width: 389px;
-	background: #002D40;
-	box-shadow: 0 0 10px #000;
-	border-radius: 10px;
-	overflow: hidden;
-	position: relative;
-	top: 50%;
-	left: 50%;
-	margin-top: -200px;
-	margin-left: -200px;
-	z-index: 1001;
-	display: none;
+    width:389px;
+    background:#002D40;
+    box-shadow:0 0 10px #000;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    top:50%;
+    left:50%;
+    margin-top:-200px;
+    margin-left:-200px;
+    z-index:1001;
+    display:none
 }
 
 #modal .header {
-	background: #75D6FF;
-	font-size:24px;
-	color: #402B00;
-	padding: 20px;
+    background:#75D6FF;
+    font-size:24px;
+    color:#402B00;
+    padding:20px
 }
 
 #modal p {
-	margin: 10px;
+    margin:10px
 }
 
 #modal .close {
-	position: absolute;
-	right: 5px;
-	top: 5px;
-	font-size: 14px;
-	font-weight: bold;
-	padding: 5px 10px;
-	border: 1px solid #ccc;
-	cursor: pointer;
-	background-color: #402B00;
+    position:absolute;
+    right:5px;
+    top:5px;
+    font-size:14px;
+    font-weight:700;
+    padding:5px 10px;
+    border:1px solid #ccc;
+    cursor:pointer;
+    background-color:#402B00
 }
 
 #addForm {
-	margin:15px;
-    padding:2px 2px;
+    margin:15px;
+    padding:2px;
     line-height:18px;
     font-size:20px;
     font-weight:400;
     color:#002D40;
     text-shadow:1px 1px 0 #ABA2A3;
-    background:#75D6FF;
-	
-	}
-	
+    background:#75D6FF
+}
+
 #addForm:before {
     content:'';
     position:absolute;
@@ -638,64 +627,61 @@ input {
     background-image:-moz-linear-gradient(left,#8d6109,#8d6109 12.5%,#ffd175 12.5%,#ffd175 25%,#09668d 25%,#09668d 37.5%,#ffd175 37.5%,#ffd175 50%,#23a3da 50%,#23a3da 62.5%,#402b00 62.5%,#402b00 75%,#ffd175 75%,#ffd175 87.5%,#9a6805 87.5%,#9a6805);
     background-image:-o-linear-gradient(left,#8d6109,#8d6109 12.5%,#ffd175 12.5%,#ffd175 25%,#09668d 25%,#09668d 37.5%,#ffd175 37.5%,#ffd175 50%,#23a3da 50%,#23a3da 62.5%,#402b00 62.5%,#402b00 75%,#ffd175 75%,#ffd175 87.5%,#9a6805 87.5%,#9a6805);
     background-image:linear-gradient(to right,#8d6109,#8d6109 12.5%,#ffd175 12.5%,#ffd175 25%,#09668d 25%,#09668d 37.5%,#ffd175 37.5%,#ffd175 50%,#23a3da 50%,#23a3da 62.5%,#402b00 62.5%,#402b00 75%,#ffd175 75%,#ffd175 87.5%,#9a6805 87.5%,#9a6805)
-}	
-	
-	
+}
+
 form {
-	padding: 10px;
+    padding:10px
 }
 
 form .input {
-	padding: 10px;
+    padding:10px
 }
 
 header {
-	width:960px;
+    width:960px
 }
 
 .userid {
-	width: 100px;
-	float:left;	
+    width:100px;
+    float:left
 }
 
 .logoutbox {
-	width: 400px;
-	float: right;
+    width:400px;
+    float:right
 }
 
-.mystatus > input[type=radio]{
-	display: none;
+.mystatus > input[type=radio] {
+    display:none
 }
 
-input[type=radio] + img{
-	cursor: pointer;
-	border: 2px solid transparent;
+input[type=radio] + img {
+    cursor:pointer;
+    border:2px solid transparent
 }
 
-input[type=radio]:checked + img{
-	border: 2px solid #f00;
+input[type=radio]:checked + img {
+    border:2px solid red
 }
-	
-	
+
 #tabs-nav li {
-	display:inline;
+    display:inline
 }
 
-.tooltip{
-	display:none;
-	position:absolute;
-	border:1px solid #333;
-	background-color: #FFD175;
-	border-radius: 5px;
-	padding: 10px;
-	color: #002D40;
-	font-size:12px Arial;
+.tooltip {
+    display:none;
+    position:absolute;
+    border:1px solid #333;
+    background-color:#FFD175;
+    border-radius:5px;
+    padding:10px;
+    color:#002D40;
+    font-size:12px Arial
 }
 
-
- .deletebtn, .editbtn{
-	width:10%;
-	margin-left: 10px;
+.deletebtn,.editbtn {
+    width:10%;
+    margin-left:10px;
     padding:5px;
     font-size:16px;
     text-decoration:none;
@@ -718,7 +704,7 @@ input[type=radio]:checked + img{
     cursor:pointer
 }
 
-.deletebtn:hover, .editbtn:hover {
+.deletebtn:hover,.editbtn:hover {
     background:#E3A019;
     background-image:-webkit-linear-gradient(top,#E3A019,#E3A019);
     background-image:-moz-linear-gradient(top,#E3A019,#E3A019);
@@ -728,8 +714,8 @@ input[type=radio]:checked + img{
     text-decoration:none
 }
 
-.modalClick{
-	width:30px;
+.modalClick {
+    width:30px;
     padding:10px;
     font-size:21px;
     text-decoration:none;
@@ -751,7 +737,7 @@ input[type=radio]:checked + img{
     -moz-box-shadow:1px 1px 1px #666;
     cursor:pointer
 }
-	
+
 .modalClick:hover {
     background:#E3A019;
     background-image:-webkit-linear-gradient(top,#E3A019,#E3A019);
@@ -762,8 +748,7 @@ input[type=radio]:checked + img{
     text-decoration:none
 }
 
-.projectsbtn, .taskbtn, .usersbtn, {
-
+.projectsbtn,.taskbtn,.usersbtn, {
     width:20%;
     padding:5px;
     font-size:21px;
@@ -787,7 +772,7 @@ input[type=radio]:checked + img{
     cursor:pointer
 }
 
-.projectsbtn:hover, .taskbtn:hover, .usersbtn:hover {
+.projectsbtn:hover,.taskbtn:hover,.usersbtn:hover {
     background:#E3A019;
     background-image:-webkit-linear-gradient(top,#E3A019,#E3A019);
     background-image:-moz-linear-gradient(top,#E3A019,#E3A019);
@@ -796,6 +781,7 @@ input[type=radio]:checked + img{
     background-image:linear-gradient(to bottom,#E3A019,#E3A019);
     text-decoration:none
 }
+
 /*
 #projectlist{
 	margin: 12px;
@@ -815,49 +801,46 @@ background:#002D40;
 }
 */
 /*SORTABLE */
-
-#sortable { 
-	list-style-type: none; 
-	margin: 0; 
-	padding: 0; 
-	width: 98%; 
-	
+#sortable {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    width:98%
 }
 
-#sortable li{ 
-	margin: 0 3px 3px 3px;
-	padding: 5px; 
-	font-size: 1.4em;
-	height: 90px; 
+#sortable li {
+    margin:0 3px 3px;
+    padding:5px;
+    font-size:1.4em;
+    height:90px
 }
 
-html>body #sortable li { 
-	height: 1.5em; 
-	line-height: 1.2em; 
+html>body #sortable li {
+    height:1.5em;
+    line-height:1.2em
 }
 
-.ui-state-highlight { 
-	height: 1.5em; 
-	line-height: 1.2em; 
+.ui-state-highlight {
+    height:1.5em;
+    line-height:1.2em
 }
-
 
 .image-gallery {
-	width:625px;
+    width:625px;
     background-image:url(../images/imgbck.jpg);
     padding:10px;
     border-radius:56px 56px 56px 56px;
     -moz-border-radius:56px;
     -webkit-border-radius:56px 56px 56px 56px;
     border:0 solid #000;
-    margin-bottom:auto;
+    margin-bottom:auto
 }
 
 .image-gallery .big-image {
     height:auto;
     padding:10px;
     margin:0 auto;
-    text-align:center;
+    text-align:center
 }
 
 .image-gallery .big-image img {
@@ -866,48 +849,44 @@ html>body #sortable li {
     max-width:400px;
     -moz-border-radius:30px;
     -webkit-border-radius:30px 30px 30px 30px;
-    border:0 solid #000;
+    border:0 solid #000
 }
-
 
 .image-gallery .big-image img:target {
-    display:block;
+    display:block
 }
-
 
 .image-gallery .big-image img:target ~ img#default {
-    display:none;
+    display:none
 }
 
-
 .image-gallery .big-image img#default {
-    display:block;
+    display:block
 }
 
 .image-gallery ul {
-    margin-top:5px;
+    margin-top:5px
 }
 
 .image-gallery li {
     display:inline;
-    margin-right:2px;
+    margin-right:2px
 }
 
 .image-gallery li:hover {
-    color:#B3AAAA;
+    color:#B3AAAA
 }
 
 .image-gallery ul,li {
     list-style:none;
     margin:0;
     padding:0;
-    max-width:100%;
+    max-width:100%
 }
 
 .thumb {
-    text-align:center;
+    text-align:center
 }
-
 
 a:link {
     color:#FFD175

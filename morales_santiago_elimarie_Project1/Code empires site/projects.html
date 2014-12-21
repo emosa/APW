@@ -20,40 +20,35 @@
     <!--  Mobile viewport optimized: j.mp/bplateviewport -->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- CSS concatenated and minified via ant build script-->
-    
-     <link rel="stylesheet" href="css/start/jquery-ui-1.10.4.custom.css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!-- end CSS-->
+    <link href="css/start/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css"><!-- end CSS-->
 </head>
 
 <body>
     <header>
-        <div class="logo"><img alt="Code Empires Logo" src="images/logo_Outlines2.png"></div><!-- end logo tag -->
+        <div class="logo"><img alt="Code Empires Logo" src=
+        "images/logo_Outlines2.png"></div><!-- end logo tag -->
 
         <div class="userid">
             Hello:
         </div>
 
         <div class="logoutbox">
-           <input name="dashboard" type="button" class="dashboard" value="Dashboard"/>
-           <input name="logOuta" type="button" id="logOuta" value="Sign Out"/>
+            <input class="dashboard" name="dashboard" type="button" value=
+            "Dashboard"> <input id="logOuta" name="logOuta" type="button"
+            value="Sign Out">
         </div>
-    </header>
-    
-    <br>
+    </header><br>
     <br>
 
     <div class="welcome">
-        <p><a href="#" class="modalClick">Add +</a></p>
+        <p><a class="modalClick" href="#">Add +</a></p>
     </div><!-- end welcome -->
 
     <div id="projectlist">
         <h1>Current Projects</h1>
 
-        <div class="projects" id="sortable">
-
-        
-        </div><!-- end projects -->
+        <div class="projects" id="sortable"></div><!-- end projects -->
     </div><!-- end projects list -->
 
     <div id="overlay">
@@ -63,49 +58,37 @@
             <h3 class="header">Add Project</h3>
 
             <div id="add">
-                <form id="addForm">
-                    <label>Project Name:</label> 
-                    <input name="projectName" type="text" id="projectName"><br>
-                    
-                    <label>Project Description:</label> 
-                    <input name="projectDescription" type="text" id="projectDescription"  ><br>
-                    <label>Project Due Date:</label> 
-                    <input name="projectDueDate" type="text" id="projectDueDate" class="datepicker"><br>
-                    <label for="status">Select status:</label>
-                    <br>
-                    
-                    <label class="mystatus">
-                    <input type="radio" name="status" id="urgent"> <img src="images/important.png" width="69" height="75" >
-                    </label> 
-                    
-                    <label class="mystatus">
-                    <input type="radio" name="status" id="normal"> <img src="images/thumb.png" width="69" height="75">
-                    </label> 
-                    
-                    <label class="mystatus">
-                    <input type="radio" name="status" id="delayed"><img src="images/calendar.png" width="69" height="75" >
-                    </label> 
-                    
-                    <label class="mystatus">
-                    <input type="radio" name="status" id="complete"> <img src="images/approve.png" width="69" height="75">
-                    </label><br>
-                    <input name="addButton" type="button" id="addButton" value=
-                    "Add"/>
+                <form id="addForm" name="addForm">
+                    <label>Project Name:</label> <input id="projectName" name=
+                    "projectName" type="text"><br>
+                    <label>Project Description:</label> <input id=
+                    "projectDescription" name="projectDescription" type=
+                    "text"><br>
+                    <label>Project Due Date:</label> <input class="datepicker"
+                    id="projectDueDate" name="projectDueDate" type="text"><br>
+                    <label for="status">Select status:</label><br>
+                    <label class="mystatus"><input id="urgent" name="status"
+                    type="radio"> <img height="75" src="images/important.png"
+                    width="69"></label> <label class="mystatus"><input id=
+                    "normal" name="status" type="radio"> <img height="75" src=
+                    "images/thumb.png" width="69"></label> <label class=
+                    "mystatus"><input id="delayed" name="status" type=
+                    "radio"><img height="75" src="images/calendar.png" width=
+                    "69"></label> <label class="mystatus"><input id="complete"
+                    name="status" type="radio"> <img height="75" src=
+                    "images/approve.png" width="69"></label><br>
+                    <input id="addButton" name="addButton" type="button" value=
+                    "Add">
                 </form>
-            </div> <!-- end  add -->
-        </div> <!-- end  modal -->
+            </div><!-- end  add -->
+        </div><!-- end  modal -->
 
-<footer>
+        <footer>
             <!-- Footer content -->
-</footer>
-<!-- jquery -->
- <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> <!-- plugins -->
- 
- 
-    <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js" ></script>
-     <!-- main -->
-  
-     <script type="text/javascript" src="js/main.js" ></script>
+        </footer><!-- jquery -->
+        <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script> <!-- plugins -->
+         <script src="js/jquery-ui-1.10.4.custom.js" type="text/javascript"></script> <!-- main -->
+         <script src="js/main.js" type="text/javascript"></script>
     </div>
 </body>
 </html>

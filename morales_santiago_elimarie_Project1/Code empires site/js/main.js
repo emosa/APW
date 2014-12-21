@@ -3,7 +3,8 @@
 	Author: Elimarie Morales Santiago
 */
 (function($) {
-    /*== TOOLTIP ==*/
+    
+	/*== TOOLTIP ==*/
     $('.masterTooltip').hover(function() {
         //hover over code
         var title = $(this).attr('title');
@@ -22,7 +23,8 @@
             left: mousex
         })
     });
-    /*== LOGIN ==*/
+    
+	/*== LOGIN ==*/
     $('#signinButton').click(function() {
         var user = $('#user').val();
         var pass = $('#pass').val();
@@ -46,7 +48,7 @@
         });
     });
     
-    /*== LOGOUT ==*/
+	/*== LOGOUT ==*/
     $('#logOut').click(function(e) {
         e.preventDefault;
         $.get('xhr/logout.php', function() {
@@ -54,7 +56,7 @@
         })
     });
     
-    /*== REGISTER ==*/
+	/*== REGISTER ==*/
     $('#submit').on('click', function() {
         var firstname = $('#first').val(),
             lastname = $('#last').val(),
@@ -85,7 +87,7 @@
         });
     });
     
-    /*  PROJECTS */
+	/*  PROJECTS */
     $('.projectsbtn').on('click', function(e) {
         e.preventDefault();
         window.location.assign('projects.html')
@@ -102,15 +104,12 @@
         e.preventDefault();
         window.location.assign('index.html')
     });
-	 $('#register').on('click', function(e) {
+    $('#register').on('click', function(e) {
         e.preventDefault();
         window.location.assign('register.html')
     });
-	 
-	
-	
     
-    /* ADD MODAL*/
+	/* ADD MODAL*/
     $('.modalClick').on('click', function(event) {
         event.preventDefault();
         $('#overlay').fadeIn().find('#modal').fadeIn();
@@ -120,7 +119,7 @@
         $('#overlay').fadeOut().find('#modal').fadeOut();
     });
     
-    /*  FADING STATUS */
+	/*  FADING STATUS */
     $('.mystatus').mouseover(function() {
         $(this).fadeTo(100, .3);
     });
@@ -128,7 +127,7 @@
         $(this).fadeTo(100, 1);
     });
     
-    /*  TEMPLATE USER ID */
+	/*  TEMPLATE USER ID */
     $.getJSON('xhr/check_login.php', function(data) {
         console.log(data);
         $.each(data, function(key, val) {
@@ -137,7 +136,7 @@
         })
     });
     
-    /*	TAB ACCORDION */
+	/*	TAB ACCORDION */
     $('#tabs p').hide().eq(0).show();
     $('#tabs p:not(:first)').hide();
     $('#tabs-nav li').click(function(e) {
@@ -149,8 +148,7 @@
         $('#tabs ' + clicked).fadeIn('fast');
     }).eq(0).addClass('current');
     
-   
-    /* NEW PROJECTS */
+	/* NEW PROJECTS */
     $('#addButton').on('click', function() {
         var projName = $('#projectName').val(),
             projDesc = $('#projectDescription').val(),
@@ -178,7 +176,7 @@
         });
     });
     
-    /* GET PROJECTS */
+	/* GET PROJECTS */
     var projects = function() {
         $.ajax({
             url: 'xhr/get_projects.php',
@@ -192,28 +190,27 @@
                         j; i++) {
                         var result = response.projects[i];
                         $(".projects").append(
-                           // '<div style="border:1px solid black">' +
+                            // '<div style="border:1px solid black">' +
                             '<div id="sortable" class="ui-state-default">' +
-                            "<input class='projectid' type='hidden' value='" + result.id + "'>" +
-                            
-							"Project Name: " + result.projectName +
-							"<br>" +
-							"Project Description: " +
-							result.projectDescription +
-							"<br>" +
-							"Project Due Date: " +
-							result.dueDate +
-							"<br>" +
-							"Project Status: " +
-							result.status + "<br>" +
+                            "<input class='projectid' type='hidden' value='" +
+                            result.id + "'>" +
+                            "Project Name: " + result.projectName +
+                            "<br>" +
+                            "Project Description: " +
+                            result.projectDescription +
+                            "<br>" +
+                            "Project Due Date: " +
+                            result.dueDate + "<br>" +
+                            "Project Status: " + result
+                            .status + "<br>" +
                             '<button class="deletebtn">Delete</button>' +
                             //'<button class="editbtn">Edit</button>' +
                             '</div> <br>');
                     }
-					
                     $('.deletebtn').on('click', function(e) {
-                        var resultID = $(this).parent().find(".projectid").val();
-					    console.log('test delete');
+                        var resultID = $(this).parent()
+                            .find(".projectid").val();
+                        console.log('test delete');
                         $.ajax({
                             url: 'xhr/delete_project.php',
                             data: {
@@ -253,30 +250,15 @@
         })
     }
     projects();
-	
-	
-	/* ADD BUTTON this did not work for me
-	$(function() {
-    $( "input[type=submit], a, button" )
-      .button()
-      .click(function( event ) {
-        event.preventDefault();
-      });
-  });
-	*/
-	
-	/* DATE PICKER */
-    $( ".datepicker" ).datepicker();
- 
-	/*  SORTABLE  */
-	
-	
-    $( "#sortable" ).sortable({
-      placeholder: "ui-state-highlight"
+   
+    /* DATE PICKER */
+    $(".datepicker").datepicker();
+   
+    /*  SORTABLE  */
+    $("#sortable").sortable({
+        placeholder: "ui-state-highlight"
     });
-    $( "#sortable" ).disableSelection();
- 
-	
+    $("#sortable").disableSelection();
 	
 	
 	
